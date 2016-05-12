@@ -486,7 +486,7 @@ void MyFrame::on_lomse_event(SpEventInfo pEvent)
             if (pCanvas)
             {
                 SpEventScoreHighlight pEv(
-                    boost::static_pointer_cast<EventScoreHighlight>(pEvent) );
+                    static_pointer_cast<EventScoreHighlight>(pEvent) );
                 MyScoreHighlightEvent event(pEv);
                 ::wxPostEvent(pCanvas, event);
             }
